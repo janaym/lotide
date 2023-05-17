@@ -4,10 +4,10 @@ const assertEqual = function(actual, expected) {
   let msg = "Assertion ";
   switch (assertion) {
   case true:
-    msg += "Passed 💯💯 " + actual + " === " + expected;
+    msg += `Passed 💯💯 ${actual} === ${expected}`;
     break;
   case false:
-    msg += "Failed ☠️☠️ " + actual + " !== " + expected;
+    msg += `Failed ☠️☠️ ${actual} !== ${expected};`;
     break;
   }
   console.log(msg);
