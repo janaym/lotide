@@ -81,7 +81,7 @@ assertArraysEqual(testArr, [1,2,3,4]);
 assertArraysEqual(without([1,2,3,4], [5, true, 'nothing']), [1,2,3,4]);
 
 //Test Case: returns empty array when all items removed
-assertArraysEqual(without([1,2,'hi',4], ['hi',4,2,1]), [])
+assertArraysEqual(without([1,2,'hi',4], ['hi',4,2,1]), []);
 
 //Test Case: handles no target given and returns original array
 assertArraysEqual(without([1,2,3,4]), [1,2,3,4]);
