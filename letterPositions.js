@@ -69,4 +69,4 @@ assertEqual(letterPositions(" hello hello ")[' '], undefined); //handles chars n
 assertEqual(letterPositions(" hello hello ")[''], undefined); //handles empty string as target
 assertArraysEqual(letterPositions("hello")['h'], [0]);
 assertArraysEqual(letterPositions('hhhhhhh')['h'], [0,1,2,3,4,5,6]);
-console.log(letterPositions(' hello world!'))
+console.log(letterPositions(' hello world!'));
