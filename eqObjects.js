@@ -52,7 +52,7 @@ const eqObjects = function(object1, object2) {
     //check if array comparison needs to be made
     if (Array.isArray(value1) && Array.isArray(value2)) {
       if (!eqArrays(value1, value2)) {
-        console.log(eqArrays(value1,value2), value1, value2);
+        //console.log(eqArrays(value1,value2), value1, value2);
         return false;
       }
     } else if (value1 !== value2) {
@@ -81,3 +81,6 @@ const shirtObject3 = {};
 assertEqual(eqObjects(shirtObject3, shirtObject2), false);
 
 assertEqual(eqObjects(shirtObject3, shirtObject3), true);
+
+assertEqual(eqObjects({array: [1,2,3], string: "hi"}, {array: [1,2,3], string:['hi']}), false);
+assertEqual(eqObjects({1:1}, {2:2}), false)
