@@ -15,9 +15,5 @@ const assertEqual = function(actual, expected) {
 
 // TEST CODE
 
-assertEqual(1, 2);
-assertEqual("hello, world", "hello, world");
-assertEqual('hello, world', 'hello, planet');
-assertEqual(10.5, 10.5);
-assertEqual(true, true);
-assertEqual(true, false);
+
+module.exports = assertEqual;
