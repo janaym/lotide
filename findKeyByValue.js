@@ -37,7 +37,10 @@ assertEqual(findKeyByValue({}, "hello"), undefined); //handles empty object
 
 
 
+
 /*
+maybe ask mentor re: better test cases
+does not handle arrays in object, assume this is as before - not to be implemented.
 
 testObj = {
   one: "one",
