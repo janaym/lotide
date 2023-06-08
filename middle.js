@@ -10,7 +10,7 @@ const middle = function(arr) {
   let newArr = [];
   if (len > 2) {
     const middleIndex = len / 2;
-    console.log(middleIndex)
+    //console.log(middleIndex)
     switch (arr.length % 2) {
     case 0:
       newArr = arr.slice(middleIndex - 1, middleIndex + 1);
