@@ -63,24 +63,26 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-const shirtObject1 = { color: 'red', size: 'medium'};
-const shirtObject2 = { size: 'medium', color: 'red'};
-assertEqual(eqObjects(shirtObject1, shirtObject2), true);
+module.exports = eqObjects;
 
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-assertEqual(eqObjects(shirtObject1, longSleeveShirtObject), false);
+// const shirtObject1 = { color: 'red', size: 'medium'};
+// const shirtObject2 = { size: 'medium', color: 'red'};
+// assertEqual(eqObjects(shirtObject1, shirtObject2), true);
 
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject),true); // => true
+// const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
+// assertEqual(eqObjects(shirtObject1, longSleeveShirtObject), false);
 
-const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false); // => false
+// const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
+// const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
+// assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject),true); // => true
 
-const shirtObject3 = {};
-assertEqual(eqObjects(shirtObject3, shirtObject2), false);
+// const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
+// assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false); // => false
 
-assertEqual(eqObjects(shirtObject3, shirtObject3), true);
+// const shirtObject3 = {};
+// assertEqual(eqObjects(shirtObject3, shirtObject2), false);
 
-assertEqual(eqObjects({array: [1,2,3], string: "hi"}, {array: [1,2,3], string:['hi']}), false);
-assertEqual(eqObjects({1:1}, {2:2}), false)
+// assertEqual(eqObjects(shirtObject3, shirtObject3), true);
+
+// assertEqual(eqObjects({array: [1,2,3], string: "hi"}, {array: [1,2,3], string:['hi']}), false);
+// assertEqual(eqObjects({1:1}, {2:2}), false)

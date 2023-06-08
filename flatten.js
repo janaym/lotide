@@ -46,22 +46,23 @@ const flatten = function(arr) {
   return newArr;
 };
 
+module.exports = flatten;
 
-//Test Case: does not modify original array (cannot use assertArraysEqual as it cannot handle nested arrays.)
-let testArr = [1,2,3,[4,5]];
-flatten(testArr);
-console.log(testArr); //should be [1,2,3,[4,5]] still.
+// //Test Case: does not modify original array (cannot use assertArraysEqual as it cannot handle nested arrays.)
+// let testArr = [1,2,3,[4,5]];
+// flatten(testArr);
+// console.log(testArr); //should be [1,2,3,[4,5]] still.
 
-//Test Case: does nothing to already flattened array
-assertArraysEqual(flatten([1,2,3,"hi", "hello", true, false]), [1,2,3,"hi", "hello", true, false]);
+// //Test Case: does nothing to already flattened array
+// assertArraysEqual(flatten([1,2,3,"hi", "hello", true, false]), [1,2,3,"hi", "hello", true, false]);
 
-//Test Case: handles empty array
-assertArraysEqual(flatten([]),[]);
-assertArraysEqual(flatten([[],1]),[1]);
+// //Test Case: handles empty array
+// assertArraysEqual(flatten([]),[]);
+// assertArraysEqual(flatten([[],1]),[1]);
 
-//Test Case: handles flattening arrays anyhwere in array
-assertArraysEqual(flatten([[1,2,true], false, ['a', false], [], 500]), [1,2,true,false,'a',false,500]);
+// //Test Case: handles flattening arrays anyhwere in array
+// assertArraysEqual(flatten([[1,2,true], false, ['a', false], [], 500]), [1,2,true,false,'a',false,500]);
 
-//Test Case: handles big subarray
-assertArraysEqual(flatten([[1,2,3,4,5]]), [1,2,3,4,5]);
+// //Test Case: handles big subarray
+// assertArraysEqual(flatten([[1,2,3,4,5]]), [1,2,3,4,5]);
 

@@ -64,9 +64,11 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-assertArraysEqual(letterPositions('hello')['l'], [2,3]); //no special cases
-assertEqual(letterPositions(" hello hello ")[' '], undefined); //handles chars not there and spaces
-assertEqual(letterPositions(" hello hello ")[''], undefined); //handles empty string as target
-assertArraysEqual(letterPositions("hello")['h'], [0]);
-assertArraysEqual(letterPositions('hhhhhhh')['h'], [0,1,2,3,4,5,6]);
-console.log(letterPositions(' hello world!'));
+module.exports = letterPositions;
+
+// assertArraysEqual(letterPositions('hello')['l'], [2,3]); //no special cases
+// assertEqual(letterPositions(" hello hello ")[' '], undefined); //handles chars not there and spaces
+// assertEqual(letterPositions(" hello hello ")[''], undefined); //handles empty string as target
+// assertArraysEqual(letterPositions("hello")['h'], [0]);
+// assertArraysEqual(letterPositions('hhhhhhh')['h'], [0,1,2,3,4,5,6]);
+// console.log(letterPositions(' hello world!'));

@@ -47,12 +47,15 @@ const map = function(array, callback) {
 };
 
 
-const words = ["ground", "control", "to", "major", "tom"];
-const results1 = map(words, word => word[0]);
+module.exports = map;
+
+// const words = ["ground", "control", "to", "major", "tom"];
+// const results1 = map(words, word => word[0]);
 
 
-assertArraysEqual(results1, ['g','c','t','m','t']);//string functio
-assertArraysEqual(map([]), []); //empty array w/ no callback fcn
-assertArraysEqual(map([2,5], x => x ** 2 ), [4,25] ); //math function
-assertArraysEqual(map([4,6,8,7], x => x%2 === 0), [true,true,true,false]) //logical expression function
-// assertArraysEqual(map([]), =>);
+
+// assertArraysEqual(results1, ['g','c','t','m','t']);//string functio
+// assertArraysEqual(map([]), []); //empty array w/ no callback fcn
+// assertArraysEqual(map([2,5], x => x ** 2 ), [4,25] ); //math function
+// assertArraysEqual(map([4,6,8,7], x => x%2 === 0), [true,true,true,false]) //logical expression function
+// // assertArraysEqual(map([]), =>);
