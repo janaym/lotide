@@ -37,12 +37,10 @@ const testArr = {
   "Akelarre":  { stars: 3 }
 };
 
-module.exports = findKey;
-
-// assertEqual(findKey(testArr, x => x.stars % 2 === 0), 'noma');
-// assertEqual(findKey(testArr, x => 0), undefined); //0 is falsely, should see undefined
-// assertEqual(findKey(testArr, x => x.stars === 3), 'Akaleri');
-// assertEqual(findKey({1:1,2:2,3:3}, x => true), '1');
+assertEqual(findKey(testArr, x => x.stars % 2 === 0), 'noma');
+assertEqual(findKey(testArr, x => 0), undefined); //0 is falsely, should see undefined
+assertEqual(findKey(testArr, x => x.stars === 3), 'Akaleri');
+assertEqual(findKey({1:1,2:2,3:3}, x => true), '1');
 
 
 

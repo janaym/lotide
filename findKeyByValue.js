@@ -28,14 +28,12 @@ const bestTVShowsByGenre = {
   police: "Brooklyn Nine-Nine"
 };
 
-module.exports = findKeyByValue;
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-
-// assertEqual(findKeyByValue(bestTVShowsByGenre, ""), undefined); //handles empty target
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy"); //returns the first key that works
-// assertEqual(findKeyByValue({}, "hello"), undefined); //handles empty object
+assertEqual(findKeyByValue(bestTVShowsByGenre, ""), undefined); //handles empty target
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy"); //returns the first key that works
+assertEqual(findKeyByValue({}, "hello"), undefined); //handles empty object
 
 
 
