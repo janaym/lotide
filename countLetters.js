@@ -29,10 +29,12 @@ const countLetters = function(sentence) {
   return letterCount;
 };
 
-assertEqual(countLetters('hello')['h'], 1); //handles instance of 1 letter
-assertEqual(countLetters('hello')['i'], undefined); //handles letters not in sentence
-assertEqual(countLetters('hello')['l'], 2); //handles instance of multiple letter
-assertEqual(countLetters('')[1], undefined); // handles empty string
-assertEqual(countLetters(' hello hello ')['l'], 4); //handles strings with spaces
-assertEqual(countLetters(' hello hello ')[' '], undefined); //handles strings with spaces when asked for space char
+module.exports = countLetters;
+
+// assertEqual(countLetters('hello')['h'], 1); //handles instance of 1 letter
+// assertEqual(countLetters('hello')['i'], undefined); //handles letters not in sentence
+// assertEqual(countLetters('hello')['l'], 2); //handles instance of multiple letter
+// assertEqual(countLetters('')[1], undefined); // handles empty string
+// assertEqual(countLetters(' hello hello ')['l'], 4); //handles strings with spaces
+// assertEqual(countLetters(' hello hello ')[' '], undefined); //handles strings with spaces when asked for space char
 

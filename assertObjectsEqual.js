@@ -66,9 +66,11 @@ const assertObjectsEqual = function(actual,expected) {
   console.log(msg);
 };
 
-assertObjectsEqual({},{});
-assertObjectsEqual({1:1},{1:'one'});
-assertObjectsEqual({colour: 'brown', size: 'medium'},{colour: 'brown', size:'medium'});
-assertObjectsEqual({array: [1,2,3]},{array: [1,2,3]});
-assertObjectsEqual({array: [1,2,3]},{array: [3,2,1]});
-assertObjectsEqual({array: [1,2,3], string: 'hi'}, {array: [1,2,3], string: 'hi'});
+module.exports = assertObjectsEqual;
+
+// assertObjectsEqual({},{});
+// assertObjectsEqual({1:1},{1:'one'});
+// assertObjectsEqual({colour: 'brown', size: 'medium'},{colour: 'brown', size:'medium'});
+// assertObjectsEqual({array: [1,2,3]},{array: [1,2,3]});
+// assertObjectsEqual({array: [1,2,3]},{array: [3,2,1]});
+// assertObjectsEqual({array: [1,2,3], string: 'hi'}, {array: [1,2,3], string: 'hi'});

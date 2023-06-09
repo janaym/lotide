@@ -81,26 +81,28 @@ const without = function(arr, targets) {
 };
 */
 
-
-//Test Case: normal arrays. checks for removing multiple items too
-assertArraysEqual(without([3,2,3,4, false, "false"],[3, false]), [2,4, "false"]);
-
-//Test Case: handles empty arrays
-assertArraysEqual(without([3,2,3,4],[]), [3,2,3,4]);
-assertArraysEqual(without([],[2,3,4]), []);
+module.exports = without;
 
 
-//Test Case: does not modify original array
-let testArr = [1,2,3,4];
-without(testArr, [2]);
-assertArraysEqual(testArr, [1,2,3,4]);
+// //Test Case: normal arrays. checks for removing multiple items too
+// assertArraysEqual(without([3,2,3,4, false, "false"],[3, false]), [2,4, "false"]);
+
+// //Test Case: handles empty arrays
+// assertArraysEqual(without([3,2,3,4],[]), [3,2,3,4]);
+// assertArraysEqual(without([],[2,3,4]), []);
 
 
-//Test Case: returns identical array when target not in array
-assertArraysEqual(without([1,2,3,4], [5, true, 'nothing']), [1,2,3,4]);
+// //Test Case: does not modify original array
+// let testArr = [1,2,3,4];
+// without(testArr, [2]);
+// assertArraysEqual(testArr, [1,2,3,4]);
 
 
-assertArraysEqual(without([1,2,'hi',4], ['hi',2,1]), [4]);
+// //Test Case: returns identical array when target not in array
+// assertArraysEqual(without([1,2,3,4], [5, true, 'nothing']), [1,2,3,4]);
 
-//Test Case: handles no target given and returns original array
-//assertArraysEqual(without([1,2,3,4]), [1,2,3,4]);
+
+// assertArraysEqual(without([1,2,'hi',4], ['hi',2,1]), [4]);
+
+// //Test Case: handles no target given and returns original array
+// //assertArraysEqual(without([1,2,3,4]), [1,2,3,4]);

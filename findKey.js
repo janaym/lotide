@@ -24,23 +24,25 @@ const findKey = function(obj, callback) {
   }
 };
 
-//testing empty calls
-assertEqual(findKey());
-assertEqual(findKey({}, x => x === 0), undefined);
+module.exports = findKey;
 
-const testArr = {
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-};
+// //testing empty calls
+// assertEqual(findKey());
+// assertEqual(findKey({}, x => x === 0), undefined);
 
-assertEqual(findKey(testArr, x => x.stars % 2 === 0), 'noma');
-assertEqual(findKey(testArr, x => 0), undefined); //0 is falsely, should see undefined
-assertEqual(findKey(testArr, x => x.stars === 3), 'Akaleri');
-assertEqual(findKey({1:1,2:2,3:3}, x => true), '1');
+// const testArr = {
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// };
+
+// assertEqual(findKey(testArr, x => x.stars % 2 === 0), 'noma');
+// assertEqual(findKey(testArr, x => 0), undefined); //0 is falsely, should see undefined
+// assertEqual(findKey(testArr, x => x.stars === 3), 'Akaleri');
+// assertEqual(findKey({1:1,2:2,3:3}, x => true), '1');
 
 
 
